@@ -1,9 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom";
-import SantaClaus from '../assets/santa-claus.png';
 import Gift from '../assets/gift.png';
-import Button from '@mui/material/Button';
 
 function Success() {
   return (
