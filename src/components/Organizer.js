@@ -31,7 +31,7 @@ function Organizer() {
   let addRemovePerson = (v) => {
     if(v === -1 && nbParticipants <= 3){
       handleClick();
-      console.log("error peu pas sup");
+      console.log("error: the minimum number of participants is 3!");
     }else{
       setNbParticipants(nbParticipants + v)
     }
@@ -48,10 +48,10 @@ function Organizer() {
       <div className="formular">
         
         <div className="secondaryTitle">
-          {nbParticipants} participants 
           <IconButton aria-label="add" color="primary" onClick={() => {addRemovePerson(+1); handleClose();}}>
               <AddCircleOutlineIcon fontSize="large"/>
           </IconButton>
+          {nbParticipants} participants 
           <IconButton aria-label="add" color="primary" onClick={() => {addRemovePerson(-1)}}>
               <RemoveCircleOutlineIcon fontSize="large"/>
           </IconButton>
@@ -75,9 +75,11 @@ function Organizer() {
           </div>
         ))}
       </div>
-      <Button variant="contained">
-        organize with {nbParticipants} participants
-      </Button>
+      <Link to="/success" style={{ textDecoration: 'none' }}>
+        <Button variant="contained">
+          organize with {nbParticipants} participants
+        </Button>
+      </Link>
       
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>

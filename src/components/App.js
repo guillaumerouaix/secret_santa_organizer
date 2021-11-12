@@ -6,7 +6,7 @@ import { createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 
 import Home from './Home.js';
 import Organizer from './Organizer.js';
-import Confirmation from './Confirmation.js';
+import Success from './Success.js';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Route exact path="/" component={Home}/>
       <Route path="/organizer" component={Organizer}/>
-      <Route path="/confirmation" component={Confirmation}/>
+      <Route path="/success" component={Success}/>
     </ThemeProvider>
     </Router>
   );

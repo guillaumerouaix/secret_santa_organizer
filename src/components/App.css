@@ -31,7 +31,8 @@
 .santaClaus {
   width: 26vw;
   min-width: 250px;
-  margin-left: 30px;
+  margin-left: 40px;
+  margin-right: 10px;
 }
 
 .containerCenter {
@@ -117,4 +118,18 @@
     font-size: 20px;
     font-weight: bold;
     color: grey;
+  }
+  
+  .successText {
+    font-size: 40px;
+    font-weight: bold;
+    color: grey;
+    max-width: 500px;
+  }
+
+  .gift {
+    width: 26vw;
+    min-width: 250px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
