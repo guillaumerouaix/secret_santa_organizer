@@ -8,13 +8,14 @@ import Button from '@mui/material/Button';
 function Home() {
   return (
     <div className="containerCenter">
-      <img src={SantaClaus} className="santaClaus"/>
+      <img src={SantaClaus} className="santaClaus" alt="Logo"/>
       <div className="organize">
         <div className="homeTitle">Santa Claus Organizer</div>
         <Link to="/organizer" style={{ textDecoration: 'none' }}>
           <Button variant="contained">
-            <img src={Snowflake} className="snowflake"/>
-            organize <img src={Snowflake} className="snowflake"/>
+            <img src={Snowflake} className="snowflake" alt="icon"/>
+            organize
+            <img src={Snowflake} className="snowflake" alt="icon"/>
           </Button>
         </Link>
       </div>
