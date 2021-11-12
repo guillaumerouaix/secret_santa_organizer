@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import SantaClaus from '../assets/santa-claus.png';
-import Snowflake from '../assets/snowflake.png';
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
