@@ -77,7 +77,7 @@ function Organizer() {
       </div>
       <Link to="/success" style={{ textDecoration: 'none' }}>
         <Button variant="contained">
-          organize with {nbParticipants} participants
+          send email
         </Button>
       </Link>
       
