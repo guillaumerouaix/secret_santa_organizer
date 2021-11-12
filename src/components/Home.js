@@ -10,7 +10,7 @@ function Home() {
     <div className="containerCenter">
       <img src={SantaClaus} className="santaClaus" alt="Logo"/>
       <div className="organize">
-        <div className="homeTitle">Santa Claus Organizer</div>
+        <div className="homeTitle">Secret Santa Organizer</div>
         <Link to="/organizer" style={{ textDecoration: 'none' }}>
           <Button variant="contained">
               <img src={Snowflake} className="snowflake" alt="icon"/>

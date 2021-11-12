@@ -72,7 +72,6 @@
   }
 
   .header {
-    width: 100vw;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -89,11 +88,33 @@
   }
 
   .formular {
-    width: 100vw;
-    padding-top: 50px;
+    padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  .organizerContainer {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .inputRow {
+    width: 100vw;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .secondaryTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
   }
