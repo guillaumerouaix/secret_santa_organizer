@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import {connect} from 'react-redux'
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import { createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 
 import Home from './Home.js';
@@ -18,10 +18,9 @@ function App() {
   return (
     <Router>
     <ThemeProvider theme={theme}>
-      <Link to="/organizer" style={{ textDecoration: 'none' }}>orga</Link>
-        <Route exact path="/" component={Home}/>
-        <Route path="/organizer" component={Organizer}/>
-        <Route path="/confirmation" component={Confirmation}/>
+      <Route exact path="/" component={Home}/>
+      <Route path="/organizer" component={Organizer}/>
+      <Route path="/confirmation" component={Confirmation}/>
     </ThemeProvider>
     </Router>
   );
