@@ -31,15 +31,17 @@
 .santaClaus {
   width: 26vw;
   min-width: 250px;
+  margin-left: 30px;
 }
 
 .containerCenter {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .homeTitle {
@@ -62,4 +64,36 @@
     width: 50px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .logo {
+    width: 5vw;
+    min-width: 50px;
+  }
+
+  .header {
+    width: 100vw;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+  }
+
+  .headerTitle {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    min-width: 400px;
+    text-align: center;
+  }
+
+  .formular {
+    width: 100vw;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {BrowserRouter as Link} from "react-router-dom";
 import SantaClaus from '../assets/santa-claus.png';
 import Snowflake from '../assets/snowflake.png';
 import Button from '@mui/material/Button';
@@ -11,13 +10,11 @@ function Home() {
       <img src={SantaClaus} className="santaClaus" alt="Logo"/>
       <div className="organize">
         <div className="homeTitle">Santa Claus Organizer</div>
-        <Link to="/organizer" style={{ textDecoration: 'none' }}>
-          <Button variant="contained">
+          <Button variant="contained" href="/organizer">
             <img src={Snowflake} className="snowflake" alt="icon"/>
             organize
             <img src={Snowflake} className="snowflake" alt="icon"/>
           </Button>
-        </Link>
       </div>
     </div>
   );
