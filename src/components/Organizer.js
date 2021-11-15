@@ -37,6 +37,46 @@ function Organizer() {
     }
   }
 
+  const picker = (participants) => {
+    let receivers = [...participants]
+    let result = []
+    participants.forEach((sender) => {
+      let indexReceiver = Math.floor(Math.random() * (receivers.length))
+      if(sender === receivers[indexReceiver] && receivers.length <= 1){
+        picker(participants);
+      }else{
+        while(sender === receivers[indexReceiver]) {
+          indexReceiver = Math.floor(Math.random() * (receivers.length));
+        }
+      }
+      result.push({
+        sender: sender,
+        receiver: receivers[indexReceiver]
+      })
+      receivers.splice(indexReceiver, 1)
+    });
+    return result;
+  }
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let participantsData = [];
+    let pn = 0;
+    let pm = 1;
+    for (var i = 0; i < nbParticipants; i++) {
+      pn += 2;
+      pm += 2;
+      participantsData.push({
+        name: event.target[pn].value,
+        email: event.target[pm].value
+      })
+    }
+    //participantsData = ["A","B","C"];
+    
+    console.log(picker(participantsData));
+  };
+
   return (
     <div className="organizerContainer">
       <Link to="/" style={{ textDecoration: 'none' }}>
@@ -45,8 +85,10 @@ function Organizer() {
           <div className="headerTitle">Secret Santa Organizer</div>
         </div>
       </Link>
+
+      <form onSubmit={handleSubmit}>
+
       <div className="formular">
-        
         <div className="secondaryTitle">
           <IconButton aria-label="add" color="primary" onClick={() => {addRemovePerson(+1); handleClose();}}>
               <AddCircleOutlineIcon fontSize="large"/>
@@ -58,20 +100,20 @@ function Organizer() {
         </div>
         <div className="inputRow">
           <TextField id="name" label="name" variant="filled"/>
-          <TextField id="name" label="email" variant="filled"/>
+          <TextField id="email" label="email" variant="filled"/>
         </div>
         <div className="inputRow">
           <TextField id="name" label="name" variant="filled"/>
-          <TextField id="name" label="email" variant="filled"/>
+          <TextField id="email" label="email" variant="filled"/>
         </div>
         <div className="inputRow">
           <TextField id="name" label="name" variant="filled"/>
-          <TextField id="name" label="email" variant="filled"/>
+          <TextField id="email" label="email" variant="filled"/>
         </div>
         {Array.from({ length: nbParticipants-3 }).map(() => ( 
           <div className="inputRow">
             <TextField id="name" label="name" variant="filled"/>
-            <TextField id="name" label="email" variant="filled"/>
+            <TextField id="email" label="email" variant="filled"/>
           </div>
         ))}
       </div>
@@ -80,6 +122,9 @@ function Organizer() {
           send email
         </Button>
       </Link>
+
+      <input type="submit" />
+      </form>
       
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="info" sx={{ width: '100%' }}>
